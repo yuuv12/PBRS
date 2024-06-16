@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>童书绘--学龄前儿童自主绘本查询系统</title>
+    <meta name="desccription" content="" />
+    <!-- 关键字 -->
+    <meta name="keywords" content="" />
+    <link rel="icon" href="../img/logo.png">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- 引入初始化样式文件 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- 引入css文件 -->
+    <link rel="stylesheet" href="../css/details.css">
+    <!-- 引入图标文件 -->
+<!--    <link rel="stylesheet" href="icon/">-->
+</head>
+
+<body>
+    <!-- header头部模块 start -->
+    <header class="header" id="top">
+        <!-- logo模块 -->
+        <div class="logo">
+            <h1>
+                <a href="index-children.html" title="童书绘">童书绘 <img src="../img/logo.png" alt="" height="70px"></a>
+            </h1>
+        </div>
+        <!-- nav导航栏部分 -->
+        <div class="nav" >
+            <a href="javascript:window.opener=null;window.open('','_self');window.close();" class="back">
+                <img src="../img/back.png" alt="返回上一页"/>
+            </a>
+<!--            <a href="javascript:history.back()" class="back" title="返回上一页">-->
+<!--                <img src="../img/back.png" alt="返回上一页"  >-->
+<!--            </a>-->
+            <a href="index-children.html" class="home" title="返回首页">
+                <img src="../img/home.png" alt="返回首页" >
+            </a>
+        </div>
+
+    </header>
+    <!-- header头部模块 end -->
+
+    <!-- 页面内容 -->
+
+    <div class="main">
+        <div class="picture">
+            <img id="bookImage" src="../img/熊熊乐园发现新世界.png" style="width: 400px; height: 400px;" alt="">
+        </div>
+        <div class="book-info">
+            <div class="fenlei-header">
+                <h2>书籍名称</h2>
+            </div>
+            <div class="fenlei-neirong">
+                <h3 class="book-name" id="book_name"></h3>
+            </div>
+            <div class="fenlei-header">
+                <h2>作者</h2>
+            </div>
+            <div class="fenlei-neirong">
+                <h3 class="book-writer" id="author"></h3>
+            </div>
+            <div class="fenlei-header">
+                <h2>领域评价</h2>
+            </div>
+            <div class="fenlei-neirong">
+                <h3 class="book-awards" id="awards"></h3>
+            </div>
+            <div class="fenlei-header">
+                <h2>适读年龄</h2>
+            </div>
+            <div class="fenlei-neirong">
+                <h3 class="book-ages" id="age_appropriate"></h3>
+            </div>
+            <div class="fenlei-header">
+                <h2>内容简介</h2>
+            </div>
+            <div class="fenlei-neirong">
+                <h3 class="book-jianjie" id="introduction"></h3>
+            </div>
+        </div>
+        `;
+    </div>
+
+
+
+    <div class="recommend">
+        <div class="box">
+            <div class="box-hd">
+                <h3>猜你喜欢</h3>
+            </div>
+            <div class="box-bd">
+                <ul id="extraBooks">
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../js/getRandomBooks.js"></script>
+<script src="../js/details.js"></script>
+</html>
+

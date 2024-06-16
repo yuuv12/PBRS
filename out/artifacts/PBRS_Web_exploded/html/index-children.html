@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>童书绘--学龄前儿童自主绘本查询系统</title>
+    <meta name="desccription" content="" />
+    <!-- 关键字 -->
+    <meta name="keywords" content="" />
+    <!-- 引入初始化样式文件 -->
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<!--   <link rel="stylesheet" href="../css/common.css"> -->
+    <link rel="stylesheet" href="../css/index-children.css">
+    <script src="../js/getRandomBooks.js"></script>
+    <!-- 引入图标文件 -->
+<!--    <link rel="stylesheet" href="../img/logo.png">-->
+</head>
+
+<body>
+    <!-- header头部模块 start -->
+    <header class="header" id="top">
+        <!-- logo模块 -->
+        <div class="logo">
+            <h1>
+                <a href="index-children.html" title="童书绘">童书绘 <img src="../img/logo.png" alt="" height="70px"></a>
+            </h1>
+        </div>
+        <!-- nav导航栏部分 -->
+        <script src="../js/headerfeature.js"></script>
+<!--        <script src="../js/voicesend.js"></script>-->
+        <!--     <script src="../js/featuresend.js"></script> -->
+        <div class="nav">
+            <ul>
+                <li>
+                    <button id="voiceButton" onclick="showPopup()" data-pressed="false">
+                        <img src="../img/colloquial.svg" alt="Normal" class="default">
+                        <img src="../img/colloquial2.svg" alt="Hover" class="hover">
+                    </button>
+                </li>
+                <li class="chosen">
+                    <a>
+                        <img src="../img/color.png" alt="">
+                        <span>颜色：</span>
+                        <img class="featureimage" src="../img/white.png"
+                            style="width: 70px;height: 70px;border-radius: 50%; " alt="">
+                    </a>
+                </li>
+                <li class="chosen">
+                    <a>
+                        <img src="../img/protagonist.jpg" alt=""><span>主角：</span>
+                        <img class="featureimage" src="../img/white.png"
+                            style="width: 70px;height: 70px;border-radius: 50%; " alt="">
+                    </a>
+                </li>
+                <li class="chosen">
+                    <a>
+                        <img src="../img/clock.jpg" alt=""><span>时间：</span>
+                        <img class="featureimage" src="../img/white.png"
+                            style="width: 70px;height: 70px;border-radius: 50%; " alt="">
+                    </a>
+                </li>
+                <li class="chosen">
+                    <a>
+                        <img src="../img/placement.png" alt=""><span>地点：</span>
+                        <img class="featureimage" src="../img/white.png"
+                            style="width: 70px;height: 70px;border-radius: 50%; " alt="">
+                    </a>
+                </li>
+                <li>
+                    <button id="submitFeaturesButton" onclick="searchChildren()">
+                        <img src="../img/OK.svg" alt="Normal" class="default">
+                        <img src="../img/OK2.svg" alt="Hover" class="hover">
+                    </button>
+
+                </li>
+            </ul>
+
+        </div>
+        <div class="page-switch-button">
+            <a href="result-parents.html">换至家长端</a>
+        </div>
+    </header>
+    <!-- header头部模块 end -->
+
+    <!-- 主体内容 -->
+    <div class="main">
+        <div class="left">
+            <div class="features" data-target="color">
+                <img src="../img/color.png" alt="">
+                <span>封面颜色</span>
+            </div>
+            <div class="features" data-target="character">
+                <img src="../img/protagonist.jpg" alt="">
+                <span>主角</span>
+            </div>
+            <div class="features" data-target="time">
+                <img src="../img/clock.jpg" alt="">
+                <span>时间</span>
+            </div>
+            <div class="features" data-target="place">
+                <img src="../img/placement.png" alt="">
+                <span>地点</span>
+            </div>
+        </div>
+
+        <script src="../js/featurecontent.js"></script>
+        <div class="right">
+            <div class="container">
+                <div class="button-arrow left">
+                    <img class="arrow-img" src="../img/left-pointing arrow.svg" alt="左箭头" />
+                </div>
+                <div class="featurecontent">
+                    <div class="fourfeatures">
+                        <div id="color" class="onefeature">
+                            <span class="name">封面颜色</span>
+                            <span class="description">你想要本什么颜色的书？</span>
+                            <div class="featurerow">
+                                <div class="featureitem" style="width: 30%;height: 100px;">
+                                    <img class="cover_color" src="../img/red.png" alt="红色">
+                                    <span>红色</span>
+                                </div>
+                                <div class="featureitem" style="width: 30%;height: 100px;">
+                                    <img class="cover_color" src="../img/orange.png" alt="橙色">
+                                    <span>橙色</span>
+                                </div>
+                                <div class="featureitem" style="width: 30%;height: 100px;">
+                                    <img class="cover_color" src="../img/yellow.png" alt="黄色">
+                                    <span>黄色</span>
+                                </div>
+                            </div>
+                            <div class="featurerow">
+                                <div class="featureitem" style="width: 30%;height: 100px;">
+                                    <img class="cover_color" src="../img/pink.png" alt="粉色">
+                                    <span>粉色</span>
+                                </div>
+                                <div class="featureitem" style="width: 30%;height: 100px;">
+                                    <img class="cover_color" src="../img/green.png" alt="绿色">
+                                    <span>绿色</span>
+                                </div>
+                                <div class="featureitem" style="width: 30%;height: 100px;">
+                                    <img class="cover_color" src="../img/blue.png" alt="蓝色">
+                                    <span>蓝色</span>
+                                </div>
+                            </div>
+                            <div class="featurerow">
+                                <div class="featureitem" style="width: 30%;height: 100px;">
+                                    <img class="cover_color" src="../img/violet.png" alt="紫色">
+                                    <span>紫色</span>
+                                </div>
+                                <div class="featureitem" style="width: 30%;height: 100px;">
+                                    <img class="cover_color" src="../img/black.png" alt="黑色">
+                                    <span>黑色</span>
+                                </div>
+                                <div class="featureitem" style="width: 30%;height: 100px;">
+                                    <img class="cover_color" src="../img/white (2).png" alt="白色">
+                                    <span>白色</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="character" class="onefeature">
+                            <span class="name">主角特征</span>
+                            <span class="description">你希望主人公是什么样的？</span>
+                            <div class="featurerow">
+                                <div class="featureitem2">
+                                    <span style="font-size: 20px;color:#d58345" title="你希望主角是哪种形象？">主角形象</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="main_character_animals" src="../img/animal.jpg" alt="动物">
+                                    <span>动物</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="main_character_plants" src="../img/plants.jpg" alt="植物">
+                                    <span>植物</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="main_character_figures" src="../img/protagonist.jpg" alt="人物">
+                                    <span>人物</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="main_character_foods" src="../img/food.png" alt="食物">
+                                    <span>食物</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="main_character_vehicles" src="../img/vehicle.jpg" alt="交通工具">
+                                    <span>交通工具</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="main_character_others" src="../img/others.jpg" alt="其他">
+                                    <span>其他</span>
+                                </div>
+                            </div>
+                            <div class="featurerow">
+                                <div class="featureitem2" style="font-size: 20px;color:#d58345">
+                                    <span style="font-size: 20px;color:#d58345" title="你希望主角在哪方面有特点？">主角特点</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_features" src="../img/presentation.png" alt="外貌">
+                                    <span>外貌</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_features" src="../img/character.png" alt="性格">
+                                    <span>性格</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_features" src="../img/emotion.png" alt="情绪">
+                                    <span>情绪</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_features" src="../img/job.png" alt="职业">
+                                    <span>职业</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_features" src="../img/identity.png" alt="身份">
+                                    <span>身份</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_features" src="../img/ability.png" alt="能力">
+                                    <span>能力</span>
+                                </div>
+                            </div>
+                            <div class="featurerow">
+                                <div class="featureitem2" style="font-size: 20px;color:#d58345">
+                                    <span style="font-size: 20px;color:#d58345" title="你希望主角间有哪些关系？">主角关系</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_relations" src="../img/family.png" alt="家庭关系">
+                                    <span>家庭关系</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_relations" src="../img/friend.png" alt="朋友关系">
+                                    <span>朋友关系</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_relations" src="../img/pet.png" alt="宠物关系">
+                                    <span>宠物关系</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_relations" src="../img/enemy.jpg" alt="敌人关系">
+                                    <span>敌人关系</span>
+                                </div>
+                            </div>
+                            <div class="featurerow">
+                                <div class="featureitem">
+                                    <img class="protagonist_relations" src="../img/teacher.png" alt="师生关系">
+                                    <span>师生关系</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_relations" src="../img/students.png" alt="同学关系">
+                                    <span>同学关系</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_relations" src="../img/neighbors.png" alt="家庭关系">
+                                    <span>邻居关系</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="protagonist_relations" src="../img/party.png" alt="朋友关系">
+                                    <span>群体关系</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="time" class="onefeature">
+                            <span class="name">时令情景</span>
+                            <span class="description">你希望故事发生于什么时令或天气？</span>
+                            <div class="featurerow">
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/spring.png" alt="春">
+                                    <span>春</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/summer.png" alt="夏">
+                                    <span>夏</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/autumn.png" alt="秋">
+                                    <span>秋</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/winter.png" alt="冬">
+                                    <span>冬</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/seasons.png" alt="四季轮转">
+                                    <span>四季轮转</span>
+                                </div>
+                            </div>
+                            <div class="featurerow">
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/morning.png" alt="早晨">
+                                    <span>早晨</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/noon.png" alt="中午">
+                                    <span>中午</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/afternoon.png" alt="傍晚">
+                                    <span>傍晚</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/night.png" alt="夜晚">
+                                    <span>夜晚</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/aday.png" alt="朝夕轮转">
+                                    <span>朝夕轮转</span>
+                                </div>
+                            </div>
+                            <div class="featurerow">
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/rain.png" alt="雨">
+                                    <span>雨</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/snow.png" alt="雪">
+                                    <span>雪</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/thunder.png" alt="打雷闪电">
+                                    <span>打雷闪电</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/wind.png" alt="大风">
+                                    <span>大风</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/rainbow.png" alt="彩虹">
+                                    <span>彩虹</span>
+                                </div>
+                            </div>
+                            <div class="featurerow">
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/festival.png" alt="节日">
+                                    <span>节日</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="time_factors" src="../img/birthday.png" alt="生日">
+                                    <span>生日</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="place" class="onefeature">
+                            <span class="name">故事地点</span>
+                            <span class="description">你希望故事发生在哪里？</span>
+                            <div class="featurerow">
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/jia.jpg" alt="家">
+                                    <span>家</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/school.jpg" alt="学校">
+                                    <span>学校</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/chengzhen.jpg" alt="城镇">
+                                    <span>城镇</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/restaurant.jpg" alt="饭店">
+                                    <span>饭店</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/shop.jpg" alt="商店">
+                                    <span>商店</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/country.jpg" alt="乡村">
+                                    <span>乡村</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/nature.jpg" alt="自然">
+                                    <span>自然</span>
+                                </div>
+                            </div>
+                            <div class="featurerow">
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/farm.jpg" alt="农牧场">
+                                    <span>农牧场</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/universe.jpg" alt="宇宙">
+                                    <span>宇宙</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/shuiyu.jpg" alt="水域">
+                                    <span>水域</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/hospital.jpg" alt="医院">
+                                    <span>医院</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/park.jpg" alt="公园">
+                                    <span>公园</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/zoo.jpg" alt="动物园">
+                                    <span>动物园</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/library.jpg" alt="图书馆">
+                                    <span>图书馆</span>
+                                </div>
+                            </div>
+                            <div class="featurerow">
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/museum.jpg" alt="博物馆">
+                                    <span>博物馆</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/haiyangguan.jpg" alt="海洋馆">
+                                    <span>海洋馆</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/yishijie.png" alt="异世界">
+                                    <span>异世界</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/tiankong.jpg" alt="天空">
+                                    <span>天空</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/beach.jpg" alt="沙滩">
+                                    <span>沙滩</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/dixia.png" alt="地下">
+                                    <span>地下</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/chengbao.jpg" alt="城堡">
+                                    <span>城堡</span>
+                                </div>
+                            </div>
+                            <div class="featurerow">
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/huayuan.jpg" alt="花园">
+                                    <span>花园</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/mengjing.jpg" alt="梦境">
+                                    <span>梦境</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/shiyanshi.jpg" alt="实验室">
+                                    <span>实验室</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/shamo.jpg" alt="沙漠">
+                                    <span>沙漠</span>
+                                </div>
+                                <div class="featureitem">
+                                    <img class="location_factors" src="../img/jiaotong.jpg" alt="交通工具">
+                                    <span>交通工具</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="button-arrow right">
+                    <img class="arrow-img" src="../img/right-pointing arrow.svg" alt="右箭头" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="recommend">
+        <div class="box">
+            <div class="box-hd">
+                <h3>新书榜单</h3>
+            </div>
+            <div class="box-bd">
+                <ul id="newBooks">
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-hd">
+                <h3>热门榜单</h3>
+            </div>
+            <div class="box-bd">
+                <ul id="hotBooks">
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/newbook.jpg" alt="">
+                            <span>新书</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay">
+        <div class="popup">
+            <p class="popup_title">语音输入</p>
+            <p class="popup_content">
+                <label for="popup_input">
+<!--                    <input id="popup_input_shell" type="text" value="······" data-show="true"/>-->
+                    <input id="popup_input" type="text" class="popup_input" value="请说出你想要的书" />
+                </label>
+            </p>
+            <div class="popup_btn">
+                <button class="confirmBtn" onclick="searchKid()">确认</button>
+                <button class="cancelBtn" onclick="hidePopup()">取消</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/VoiceDictation.js"></script>
+
+
+</html>

@@ -75,7 +75,7 @@ public class ParentSearch extends HttpServlet {
         List<ScoreDoc> scoreDocs = new ArrayList<>();
         for (ScoreDoc scoreDoc : beforeFilterScoreDocs) {
             if (scoreDoc.score >= RELEVANCE_THRESHOLD) {
-//                System.out.println(scoreDoc.score);
+                System.out.println(scoreDoc.score);
                 scoreDocs.add(scoreDoc);
             }
         }

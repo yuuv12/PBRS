@@ -1,0 +1,472 @@
+/* header 头部制作*/
+.header {
+    /*     position: fixed; */
+    margin: auto auto auto auto;
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+    justify-content: center;
+    /* 水平居中 */
+    /*     padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px; */
+    width: 100%;
+    height: 120px; /* background-color: #ffffff; */
+    flex-wrap: nowrap;
+}
+
+.header .logo {
+    position: static;
+    margin-top: 30px;
+    left: 30px;
+    width: 140px;
+    height: 140px;
+    margin-right: 20px;
+}
+
+.header .logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo a {
+    top: 20px;
+    display: block;
+    font-size: 0;
+}
+
+
+.page-switch-button {
+    position: static;
+    min-width: 100px;
+    margin-top: 90px;
+    margin-left: 15px;
+    height: 120px;
+    margin-right: 0px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.page-switch-button a {
+    padding: 10px 10px;
+    /* 按钮内边距 */
+    min-width: 80px;
+    font-size: 16px;
+    /* 按钮字体大小 */
+    background-color: #FFA500;
+    /* 按钮背景颜色 */
+    color: white;
+    /* 按钮文字颜色 */
+    border: none;
+    /* 按钮无边框 */
+    border-radius: 5px;
+    /* 按钮圆角 */
+    cursor: pointer;
+    /* 鼠标悬停时显示手形图标 */
+}
+
+.page-switch-button a:hover {
+    background-color: #c18007;
+    /* 鼠标悬浮时的背景颜色 */
+}
+.nav {
+    position: static;
+    margin-top: 30px;
+    float: left;
+    margin-left: 15px;
+    height: 120px;
+    min-width:1100px;
+    background-color: #F9E4C5;
+    padding: 20px 0px;
+    border-radius: 15px 15px 15px 15px;
+    flex-wrap: nowrap;
+}
+
+.nav ul li {
+    float: left;
+    margin: 0 0px;
+    padding: 0px 10px
+}
+
+.nav ul li a {
+    /*display: flex;*/
+    background: #fff;
+    display: block;
+    align-items: center;
+    height: 80px;
+    width: 220px;
+    /*     padding: 10px 10px; */
+    line-height: 80px;
+    font-size: 18px;
+    color: #050505;
+
+}
+
+/* .nav ul li a:hover {
+    border-bottom: 2px solid #FEB57E;
+    color: #FEB57E;
+} */
+
+.nav ul li button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    padding: 0 0px;
+    margin: 0px 0px;
+    line-height: 120px;
+}
+
+.nav ul li button img {
+    display: none;
+    /* 默认不显示任何图片 */
+    width: 80px;
+    /* 更改图标大小 */
+    height: 80px;
+    /* 更改图标大小 */
+}
+
+.nav ul li button img.default {
+    display: block;
+    /* 默认显示 */
+}
+
+.nav ul li button:hover img.default {
+    display: none;
+    /* 鼠标悬浮时不显示 */
+}
+
+.nav ul li button:hover img.hover {
+    display: block;
+    /* 鼠标悬浮时显示 */
+}
+
+.nav ul li a img {
+    height: 75px;
+    width: 80px;
+}
+
+.nav ul li a featureimage {
+    height: 70px;
+    /* 设置适当的高度 */
+    width: 70px;
+    /* 设置适当的宽度 */
+    border-radius: 50%;
+    /* 圆形图片 */
+    /* object-fit: cover; */
+    /* 保证图片内容适合容器尺寸，不变形 */
+}
+
+
+
+.main {
+    display: flex;
+    margin: auto auto auto auto;
+    width: 1470px;
+}
+
+.left {
+    width: 240px;
+    height: 460px;
+    padding: 50px 0px 0px 60px;
+    /*     text-align: center; */
+    font-size: 18px;
+    color: #050505;
+}
+
+.right {
+    width: 1050px;
+    height: 460px;
+    font-size: 18px;
+    color: #050505;
+    padding: 50px 0px 0px 50px;
+}
+
+.features {
+    width: 200px;
+    background-color: #F9E4C5;
+    box-shadow: 0 0 10px #0000001a;
+    padding: 0px 0px;
+    margin: 20px 0px;
+    border-radius: 15px
+}
+
+.features:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* 增强阴影效果 */
+}
+
+.features.highlight {
+    background-color: #F9D4B5;
+    /* 更亮的背景色突出显示 */
+    border: 2px solid #FFA500;
+    /* 添加橙色边框 */
+}
+
+.features img {
+    height: 100px;
+    border-radius: 15px 0px 0px 15px
+}
+
+.container {
+    width: 1100px;
+    height: 460px;
+    background-color: #F9E4C5;
+    box-shadow: 0 0 10px #0000001a;
+    padding: 0px 0px;
+    margin: 20px 0px;
+    border-radius: 15px;
+    /*  position: relative; */
+    display: flex;
+    justify-content: space-between;
+    /* 使按钮分布在两侧，内容在中间 */
+}
+
+.button-arrow {
+    width: 50px;
+    height: 460px;
+    /* padding: 215px 10px; */
+    display: flex;
+    justify-content: center;
+    /* 使图片在按钮内居中 */
+    align-items: center;
+    /* 使图片在按钮内居中 */
+    padding-left: 0px;
+}
+
+.button-arrow .left {
+    left: 10px;
+    padding-left: 0px;
+}
+
+.button-arrow .right {
+    right: 10px;
+    padding-left: 0px;
+}
+
+.arrow-img {
+    width: 30px;
+    /* 设置箭头图片的宽度 */
+    height: 30px;
+    /* 设置箭头图片的高度 */
+}
+
+.featurecontent {
+    display: flex;
+    overflow: hidden;
+    width: 1000px;
+    /*overflow: hidden;*/
+}
+
+.fourfeatures {
+    background-color: #fff;
+    display: flex;
+    /* 横向排列 */
+    min-width: 4000px;
+    transition: transform 0.3s ease-out;
+    margin: 20px 0px;
+}
+
+.onefeature {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    width: 1000px;
+    flex: 0 0 1000px;
+    flex-shrink: 0;
+    /* // 防止flex容器缩小这些项目 */
+    opacity: 1;
+    visibility: visible;
+    padding: 20px;
+}
+
+.onefeature.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.onefeature .name {
+    font-size: 40px;
+    color: #050505;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 14px;
+    /* 根据需要调整字体大小 */
+    color: #666;
+    /* 根据需要调整文本颜色 */
+    margin-left: 10px;
+    /* 与标题保持一定间距 */
+    font-style: italic;
+    /* 斜体字用于区分 */
+}
+
+.featurerow {
+    display: flex;
+    /* 水平布局 */
+    justify-content: space-around;
+    /* 平均分布在行中 */
+    margin-bottom: 20px;
+    /* 行间距 */
+}
+
+/* 鼠标悬浮时的阴影效果 */
+.featureitem:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 添加轻微的阴影 */
+    cursor: pointer;
+    /* 更改鼠标指针为手形 */
+}
+
+/* 被选中时的样式 */
+.featureitem.selected {
+    border: 2px solid #FFA500;
+    /* 橙色边框表示选中状态 */
+    box-shadow: none;
+    /* 选中时去除阴影效果 */
+}
+
+.featureitem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* 文字和图片居中 */
+    width: 14.3%;
+    height: 70px;
+    border-radius: 50px
+}
+
+.featureitem2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* 文字和图片居中 */
+    width: 14.3%;
+    height: 70px;
+    border-radius: 50px
+}
+
+.featureitem img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    /* 图片与文字间距 */
+    border-radius: 50px;
+}
+
+.featureitem span {
+    display: block;
+    /* 文字显示为块级元素 */
+    color: black;
+    /* 文字颜色 */
+    font-size: 16px;
+    /* 文字大小 */
+}
+
+
+
+.recommend {
+    /* display: flex;     */      /* 使用Flexbox布局 */
+    justify-content: center; /* 水平居中 */
+    width: 100%;            /* 占满整个容器宽度 */
+    max-width: 1200px;      /* 最大宽度，超过这个宽度则居中显示 */
+    margin: auto;           /* 上下自动，左右自动（水平居中） */
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px #0000001a;
+    margin-top: 150px;
+/*     margin-left: 140px; */
+
+}
+
+.box {
+    justify-content: center;
+    width: 1100px;
+    height: 350px;
+    margin: 50px 50px 0px 50px;
+    overflow-x: auto;
+    /* 允许水平滚动 */
+    white-space: nowrap;
+}
+
+.box-hd {
+    height: 45px;
+}
+
+.box-hd h3 {
+    float: left;
+    font-size: 30px;
+    color: #494949;
+    margin-bottom: 20px;
+}
+
+.box-hd a {
+    float: right;
+    font-size: 12px;
+    color: #a5a5a5;
+    margin-top: 10px;
+}
+
+/* 把li的父亲ul修改的足够宽，一行就能装开5个盒子了 */
+.box-bd ul {
+    width: 1050px;
+    height: 250px;
+    border-bottom: solid 1px #494949;
+    white-space: nowrap;
+    /* 防止换行 */
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* 隐藏垂直滚动条 */
+    display: flex;
+    /* 使用 flex 布局 */
+    flex-wrap: nowrap;
+    /* 防止换行 */
+    padding: 0;
+    /* 移除默认的内边距 */
+    margin: 0;
+    /* 移除默认的外边距 */
+}
+
+.box-bd ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.box-bd ul li {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-right: 60px;
+    /*     margin-bottom: 15px; */
+    /* display: inline-block; */
+    flex: 0 0 auto;
+    /* 设置为不可伸缩，保持固定宽度 */
+    flex-direction: column;
+    /* 垂直排列图片和文字 */
+    align-items: center;
+    /* 水平居中对齐子元素 */
+}
+
+/* 图片233宽度比盒子宽度288大，因此得用下面这个让图片和盒子一样宽 */
+.box-bd ul li img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px
+}
+
+.box-bd ul li span {
+    margin: 5px 30px 20px 0px;
+    font-size: 20px;
+    color: #050505;
+    font-weight: 400;
+}

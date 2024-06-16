@@ -1,0 +1,148 @@
+
+/* header 头部制作*/
+.header {
+    /*position: fixed;*/
+    top: 0px;
+    display: flex;
+/*     padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px; */
+    width: 1400px;
+    height: 120px;
+    /* background-color: #ffffff; */
+    flex-wrap: nowrap;
+}
+
+.header .logo {
+    position: absolute;
+    top: 17px;
+    left: 30px;
+    width: 140px;
+    height: 140px;
+    margin-right: 20px;
+}
+.header .logo img {
+    width: 100%; 
+    height: auto; 
+    border-radius:50%;
+}
+
+.logo a {
+    display: block;
+    font-size: 0;
+}
+
+.nav {
+    /* position: absolute; */
+    top: 0px;
+    float: left;
+    margin-left: 200px;
+    height: 120px;
+    background-color: #F9E4C5;
+    padding: 20px 0px;
+    border-radius: 0px 0px 15px 15px
+}
+
+
+.nav ul li {
+    float: left;
+    margin: 0 0px;
+    padding: 0px 10px 
+}
+
+.nav ul li a {
+    /*display: flex;*/
+    background: #fff;
+    display: block;
+    align-items: center;
+    height: 80px;
+    width: 220px;
+/*     padding: 10px 10px; */
+    line-height: 80px;
+    font-size: 18px;
+    color: #050505;
+}
+
+/* .nav ul li a:hover {
+    border-bottom: 2px solid #FEB57E;
+    color: #FEB57E;
+} */
+
+.nav ul li button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    padding: 0 10px; 
+    margin: 0px 10px;
+    line-height: 120px;
+}
+.nav ul li button img {
+    display: none;
+    /* 默认不显示任何图片 */
+    width: 80px;
+    /* 更改图标大小 */
+    height: 80px;
+    /* 更改图标大小 */
+}
+.nav ul li button img.default {
+    display: block;
+    /* 默认显示 */
+}
+
+.nav ul li button:hover img.default {
+    display: none;
+    /* 鼠标悬浮时不显示 */
+}
+.nav ul li button:hover img.hover {
+    display: block;
+        /* 鼠标悬浮时显示 */
+}
+.nav ul li a img {
+    height: 75px;
+    width: 80px;
+}
+
+.nav ul li a featureimage {
+    height: 70px;
+    /* 设置适当的高度 */
+    width: 70px;
+    /* 设置适当的宽度 */
+    border-radius: 50%;
+    /* 圆形图片 */
+    /* object-fit: cover; */
+    /* 保证图片内容适合容器尺寸，不变形 */
+}
+
+.header .search {
+    position: absolute;
+    left: 800px;
+    top: 34px;
+    width: 538px;
+    height: 37px;
+    border: 2px solid #841b20;
+}
+
+.search input {
+    float: left;
+    width: 454px;
+    height: 33px;
+    padding-left: 10px;
+}
+
+.search button {
+    float: right;
+    width: 80px;
+    height: 34px;
+    background: #841b20;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+
+

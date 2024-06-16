@@ -44,7 +44,7 @@ public class GetSimilarBook extends HttpServlet {
             DataMapper mp = MapperUtils.getMapper(DataMapper.class);
             lst = mp.selectSimilarBook(sq);
         }
-        System.out.println(JSONObject.toJSONString(lst));
+
         res.getWriter().write(JSONObject.toJSONString(lst));
     }
 }

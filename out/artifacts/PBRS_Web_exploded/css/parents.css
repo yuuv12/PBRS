@@ -1,0 +1,269 @@
+/*
+body {
+    margin: 0; /* 重置body的margin */
+  
+  
+/*搜索框*/
+  .search-wrapper {
+    position: absolute; /* 使用绝对定位 */
+    top: 60px; /* 距离页面顶部 17px */
+    left: 40%; /* 水平居中 */
+    transform: translateX(-40%); /* 水平居中 */
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .search-input {
+    top: 60px;
+    width:900px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .search-button {
+    height: 50px;
+    margin-left: 10px;
+    width: 60px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #f7ecb1;
+    color: #141313;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex; /* 新增 */
+    justify-content: center; /* 新增 */
+    align-items: center; /* 新增 */
+    writing-mode: horizontal-tb;
+}
+
+.search-button span {
+    writing-mode: horizontal-tb; /* 新增 */
+    display: inline;
+  }
+
+  
+  .search-button:hover {
+    background-color: #f7ecb1;
+  }
+
+/*家长端儿童端切换*/
+  .page-switch-button {
+    position:absolute;
+    left:80%;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 120px;
+    top:60px;
+    margin-right: 10px;
+    align-items: center;
+  }
+
+  .page-switch-button a {
+    padding: 10px 10px;
+    /* 按钮内边距 */
+    font-size: 16px;
+    /* 按钮字体大小 */
+    background-color: #FFA500;
+    /* 按钮背景颜色 */
+    color: white;
+    /* 按钮文字颜色 */
+    border: none;
+    /* 按钮无边框 */
+    border-radius: 5px;
+    /* 按钮圆角 */
+    cursor: pointer;
+    /* 鼠标悬停时显示手形图标 */
+  }
+
+.page-switch-button a:hover {
+    background-color: #c18007;
+    /* 鼠标悬浮时的背景颜色 */
+  }
+
+
+
+
+
+/*分面*/
+  .facet-wrapper {
+    /*position: absolute;*/
+    width:1250px;
+    padding: 10px;
+    margin-top: 150px;
+    /*left:30px;*/
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px #0000001a;
+  }
+
+
+
+  .facet-header {
+    padding: 10px 0;
+    white-space: nowrap;
+  }
+  
+  .facet-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .facet-group h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .facet-header {
+    margin-right: 20px;
+  }
+  
+  .facet-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .facet-list li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .facet-list label {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .facet-list input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+
+
+
+
+/*应用筛选按钮*/
+.facet-header {
+    display: flex;
+    justify-content: flex-start;
+    /*justify-content: space-between;*/
+    align-items: center;
+}
+
+.facet-controls {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem; /* 将按钮向右对齐 */
+}
+
+.facet-controls .btn {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background-color: #fbf1a7;
+    color: #151515;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.facet-controls .btn:hover {
+    background-color: #eddc5d;
+}
+
+
+
+/*返回书目结果*/
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex; /* 将 display 属性设置为 flex */
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+
+.container_parents {
+  width: 1250px;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 30px;
+
+  display: block;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0000001a;;
+}
+
+.book-image {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.book-image img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.book-info {
+  flex-grow: 1;
+}
+
+.book-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.book-author,
+.book-awards,
+.book-age,
+.book-description {
+  margin-bottom: 6px;
+}
+
+.fenlei-header,
+.fenlei-neirong {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.fenlei-header h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.fenlei-neirong h3 {
+  font-size: 16px;
+  color: #666;
+}
