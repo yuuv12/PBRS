@@ -1,0 +1,202 @@
+/* header 头部制作*/
+.header {
+    /*position: fixed;*/
+    top: 0px;
+    display: flex;
+    /*     padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px; */
+    width: 1400px;
+    height: 120px;
+    /* background-color: #ffffff; */
+    flex-wrap: nowrap;
+}
+
+.header .logo {
+    position: absolute;
+    top: 17px;
+    left: 30px;
+    width: 140px;
+    height: 140px;
+    margin-right: 20px;
+}
+
+.header .logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo a {
+    display: block;
+    font-size: 0;
+}
+
+.nav {
+    /* position: absolute; */
+    margin-top: 30px;
+    float: left;
+    margin-left: 200px;
+    height: 120px;
+    width: 1900px;
+    background-color: #F9E4C5;
+    padding: 20px 0px;
+    border-radius: 15px 15px 15px 15px
+}
+
+.nav ul li {
+    float: left;
+    margin: 0 0px;
+    padding: 0px 10px
+}
+
+.nav ul .chosen a {
+    background: #fff;
+    display: block;
+    align-items: center;
+    height: 80px;
+    width: 220px;
+    /*     padding: 10px 10px; */
+    line-height: 80px;
+    font-size: 18px;
+    color: #050505;
+}
+
+.nav ul .like button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    display: block;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    padding: 0 10px;
+    margin: 0px 10px;
+
+}
+
+.nav ul li a img {
+    height: 75px;
+    width: 80px;
+}
+
+.nav ul li a featureimage {
+    height: 70px;
+    /* 设置适当的高度 */
+    width: 70px;
+    /* 设置适当的宽度 */
+    border-radius: 50%;
+    /* 圆形图片 */
+    /* object-fit: cover; */
+    /* 保证图片内容适合容器尺寸，不变形 */
+}
+
+.nav ul .like button img {
+    width: 70px;
+    height: 70px;
+
+}
+
+.nav ul .back button {
+    display: block;
+    background-color: transparent;
+}
+
+.nav .back a {
+    background-color: transparent;
+    /* 设置链接背景色为透明 */
+}
+
+.nav .like {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    /* 定位到like按钮的正下方 */
+    left: 50%;
+    /* 从左边偏移50% */
+    transform: translateX(-50%);
+    /* 向左平移50%，使其居中对齐like按钮 */
+    background: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 220px;
+    /* 与like按钮宽度一致或根据实际需求调整 */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* 圆角边框 */
+    display: none;
+    /* 默认不显示，通过JavaScript来控制显示 */
+    z-index: 1000;
+    /* 确保下拉菜单位于其他元素上方 */
+    text-align: left;
+    overflow: hidden;
+}
+
+/* 下拉菜单内的列表项样式 */
+.dropdown-menu li {
+    border-radius: 8px;
+    width: 220px;
+    cursor: pointer;
+    font-size: 14px;
+    /* 文本居中显示 */
+}
+
+/* 鼠标悬停在列表项上时的样式 */
+.dropdown-menu li:hover {
+    background-color: #f7f7f7;
+}
+
+
+
+
+.container {
+    width: 1200px;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-left: 140px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px #0000001a;
+}
+
+.book {
+    display: inline-block;
+    width: 200px;
+    background-color: #fff;
+    margin-left: 11px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.book .cover {
+    width: 100%;
+    height: auto;
+}
+
+.book .info .like_it {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 10px;
+    /* Added this line */
+    right: 10px;
+    /* Added this line */
+}
+
+.book .collect {
+    width: 20px;
+    height: 20px;
+}
+
+.info p {
+    text-align: center;
+
+}
+
+.info span {
+    font-weight: bold;
+}

@@ -1,0 +1,70 @@
+/* header 头部制作*/
+.header {
+/*     position: fixed; */
+    margin: auto auto auto auto;
+    display: flex;
+    align-items: center;
+        /* 垂直居中 */
+    justify-content: center;
+        /* 水平居中 */
+    /*     padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px; */
+    width: 100%;
+    height: 120px;
+    /* background-color: #ffffff; */
+    flex-wrap: nowrap;
+}
+
+.header .logo {
+    position: static;
+    margin-top: 30px;
+    left: 30px;
+    width: 140px;
+    height: 140px;
+    margin-right: 20px;
+}
+
+.header .logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo a {
+    top: 20px;
+    display: block;
+    font-size: 0;
+}
+
+
+.page-switch-button {
+    position: static;
+    margin-top: 90px;
+    margin-left: 15px;
+    height: 120px;
+    margin-right: 0px;
+    align-items: center;
+}
+
+.page-switch-button a {
+    padding: 10px 10px;
+    /* 按钮内边距 */
+    font-size: 16px;
+    /* 按钮字体大小 */
+    background-color: #FFA500;
+    /* 按钮背景颜色 */
+    color: white;
+    /* 按钮文字颜色 */
+    border: none;
+    /* 按钮无边框 */
+    border-radius: 5px;
+    /* 按钮圆角 */
+    cursor: pointer;
+    /* 鼠标悬停时显示手形图标 */
+}
+
+.page-switch-button a:hover {
+    background-color: #c18007;
+    /* 鼠标悬浮时的背景颜色 */
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>童书绘--学龄前儿童自主绘本查询系统</title>
+    <meta name="desccription"
+        content="" />
+    <!-- 关键字 -->
+    <meta name="keywords" content="" />
+    <link rel="icon" href="../img/logo.png">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- 引入初始化样式文件 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- 引入导航栏文件 -->
+    <link rel="stylesheet" href="../css/common_p.css">
+    <!-- 引入图标文件 -->
+<!--    <link rel="stylesheet" href="icon/">-->
+    <!--引入家长端检索结果文件-->
+    <link rel="stylesheet" href="../css/parents.css">
+    <!-- 引入家长端js文件-->
+</head>
+
+
+<body>
+  <!-- header头部模块 start -->
+  <header class="header" id="top">
+    <!-- logo模块 -->
+    <div class="logo">
+      <h1>
+        <a href="index-children.html" title="童书绘">童书绘 <img src="../img/logo.png" alt="" height="70px"></a>
+      </h1>
+    </div>
+  </header>
+
+
+<!-- 搜索框模块 -->
+  <div class="search-wrapper">
+    <label>
+      <input type="text" class="search-input" placeholder="请输入搜索内容" id="search-parent">
+    </label>
+    <button class="search-button" onclick="parentSearch('search-parent', '')">搜索</button>
+
+  </div>
+
+<!--换至儿童端-->  
+  <div class="page-switch-button">
+    <a href="index-children.html">换至儿童端</a>
+  </div>
+
+ 
+<!--分面选择-->
+  <div class="facet-wrapper" hidden="hidden"  id="facet">
+    <div class="facet-header">
+        <h2>筛选条件</h2>
+        <!--分面选择确认按钮-->
+      <div class="facet-controls">
+            <button id="apply-filters" class="btn btn-primary" onclick="facetSearch()">应用筛选</button>
+        </div>
+    </div>
+
+  
+    <div class="facet-group">
+      <div class="facet-header">
+        <h3 id="awards">领域评价</h3>
+      </div>
+      <ul class="facet-list">
+        <li><label><input type="checkbox">全部</label></li>
+        <li><label><input type="checkbox">凯迪克大奖</label></li>
+        <li><label><input type="checkbox">儿童图书奖</label></li>
+        <li><label><input type="checkbox">纽约时报畅销书</label></li>
+      </ul>
+    </div>
+  
+    <div class="facet-group">
+      <div class="facet-header">
+        <h3 id="book_type">主题分类</h3>
+      </div>
+      <ul class="facet-list">
+        <li><label><input type="checkbox">全部</label></li>
+        <li><label><input type="checkbox">历史知识</label></li>
+        <li><label><input type="checkbox">科学知识</label></li>
+        <li><label><input type="checkbox">节日民俗</label></li>
+        <li><label><input type="checkbox">自然生物</label></li>
+        <li><label><input type="checkbox">数学知识</label></li>
+        <li><label><input type="checkbox">线条色彩</label></li>
+        <li><label><input type="checkbox">安全教育</label></li>
+        <li><label><input type="checkbox">传统文化</label></li>
+        <li><label><input type="checkbox">成长道理</label></li>
+        <li><label><input type="checkbox">健康问题</label></li>
+        <li><label><input type="checkbox">习惯养成</label></li>
+        <li><label><input type="checkbox">艺术修养</label></li>
+        <li><label><input type="checkbox">趣味解密</label></li>
+        <li><label><input type="checkbox">哲理思考</label></li>
+        <li><label><input type="checkbox">情感体验</label></li>
+
+      </ul>
+    </div>
+
+    <div class="facet-group">
+      <div class="facet-header">
+        <h3 id="is_series">系列丛书</h3>
+      </div>
+      <ul class="facet-list">
+        <li><label><input type="checkbox">全部</label></li>
+        <li><label><input type="checkbox">是</label></li>
+        <li><label><input type="checkbox">否</label></li>
+      </ul>
+    </div>
+  
+    
+    <div class="facet-group">
+      <div class="facet-header">
+        <h3 id="age_appropriate">适读年龄</h3>
+      </div>
+      <ul class="facet-list">
+        <li><label><input type="checkbox">全部</label></li>
+        <li><label><input type="checkbox"> 3-6岁</label></li>
+        <li><label><input type="checkbox"> 7-10岁</label></li>
+      </ul>
+    </div>
+  
+    <div class="facet-group">
+      <div class="facet-header">
+        <h3 id="cover_color">颜色</h3>
+      </div>
+      <ul class="facet-list">
+        <li><label><input type="checkbox">全部</label></li>
+        <li><label><input type="checkbox">彩色</label></li>
+        <li><label><input type="checkbox">红色</label></li>
+        <li><label><input type="checkbox">橙色</label></li>
+        <li><label><input type="checkbox">黄色</label></li>
+        <li><label><input type="checkbox">粉色</label></li>
+        <li><label><input type="checkbox">绿色</label></li>
+        <li><label><input type="checkbox">蓝色</label></li>
+        <li><label><input type="checkbox">紫色</label></li>
+        <li><label><input type="checkbox">黑色</label></li>
+        <li><label><input type="checkbox">白色</label></li>
+      </ul>
+    </div>
+
+    <div class="facet-group">
+      <div class="facet-header">
+        <h3 id="main_character">主角形象</h3>
+      </div>
+      <ul class="facet-list">
+        <li><label><input type="checkbox">全部</label></li>
+        <li><label><input type="checkbox">动物</label></li>
+        <li><label><input type="checkbox">植物</label></li>
+        <li><label><input type="checkbox">人物</label></li>
+        <li><label><input type="checkbox">食物</label></li>
+        <li><label><input type="checkbox">交通工具</label></li>
+        <li><label><input type="checkbox">其他</label></li>
+      </ul>
+    </div>
+
+    <div class="facet-group">
+      <div class="facet-header">
+        <h3 id="time_factors">时间</h3>
+      </div>
+      <ul class="facet-list">
+        <li><label><input type="checkbox">春</label></li>
+        <li><label><input type="checkbox">夏</label></li>
+        <li><label><input type="checkbox">秋</label></li>
+        <li><label><input type="checkbox">冬</label></li>
+        <li><label><input type="checkbox">四季轮转</label></li>
+        <li><label><input type="checkbox">早晨</label></li>
+        <li><label><input type="checkbox">中午</label></li>
+        <li><label><input type="checkbox">傍晚</label></li>
+        <li><label><input type="checkbox">夜晚</label></li>
+        <li><label><input type="checkbox">朝夕轮转</label></li>
+        <li><label><input type="checkbox">节日</label></li>
+        <li><label><input type="checkbox">生日</label></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container_parents" id="container_parents">
+
+    <div class="book-item">
+      <div class="book-image">
+        <img src="../img/jiazhang_pic.jpg" alt="Book 1">
+      </div>
+      <div class="book-info">
+        <div class="fenlei-header">
+          <h2>书籍名称</h2>
+        </div>
+        <div class="fenlei-neirong">
+          <h3 class="book-name">小王子</h3>
+        </div>
+        <div class="fenlei-header">
+          <h2>作者</h2>
+        </div>
+        <div class="fenlei-neirong">
+          <h3 class="book-writer">Antoine de Saint-Exupéry</h3>
+        </div>
+        <div class="fenlei-header">
+          <h2>领域评价</h2>
+        </div>
+        <div class="fenlei-neirong">
+          <h3 class="book-awards">大奖赛冠军</h3>
+        </div>
+        <div class="fenlei-header">
+          <h2>适读年龄</h2>
+        </div>
+        <div class="fenlei-neirong">
+          <h3 class="book-ages">7-12</h3>
+        </div>
+        <div class="fenlei-header">
+          <h2>内容简介</h2>
+        </div>
+        <div class="fenlei-neirong">
+          <h3 class="book-jianjie">这是一个哲学故事，讲的是一个年轻的王子为了寻求知识而访问了各个星球。</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</body>
+<script src="../js/parents-js.js"></script>
+</html>

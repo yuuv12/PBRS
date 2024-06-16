@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 具体映射，用于实现java下的接口（须一一对应），写sql语句的地方 -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pbrs.mybatis.mapper.DataMapper">
+
+<!--    <select id="selectA" resultType="Data">-->
+<!--        &lt;!&ndash;查询index时须加反引号 即：`` &ndash;&gt;-->
+<!--        select * from data where `index`=499-->
+<!--    </select>-->
+
+    <!--List<Data> queryAllData();-->
+    <select id="selects" resultType="Data">
+        select * from data where cover_color like #{cover_color} and location_factors like #{location_factors}
+    </select>
+
+    <!--List<Data> queryAllData();-->
+    <select id="queryAllData" resultType="Data">
+        select * from data
+    </select>
+
+    <!--Data selectOneByIndex(int index);-->
+    <select id="selectOneByIndex" resultType="Data">
+        select * from data where `index` = #{index}
+    </select>
+
+    <!--String selectBySql(String sql);-->
+    <select id="selectBySql" resultType="Data">
+        ${sql}
+    </select>
+
+    <!--Data selectOneByIndexAndArgs(int index, String args);-->
+    <select id="selectOneByIndexAndArgs" resultType="Data">
+        select * from data where (`index` = #{index}) AND (${args})
+    </select>
+
+    <!--List<Data> selectSimilarBook(@Param("index") int index);-->
+    <select id="selectSimilarBook" resultType="Data">
+        select * from data where (serial_number in ${index})
+    </select>
+
+</mapper>

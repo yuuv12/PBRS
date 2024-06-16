@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>童书绘--学龄前儿童自主绘本查询系统</title>
+    <meta name="desccription" content="" />
+    <!-- 关键字 -->
+    <meta name="keywords" content="" />
+    <link rel="icon" href="../img/logo.png">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <!-- 引入初始化样式文件 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- 引入专门样式话文件 -->
+    <link rel="stylesheet" href="../css/search_result_children.css">
+    <!-- 引入图标文件 -->
+<!--    <link rel="stylesheet" type="text/css" href="../fonts/iconfont.css">-->
+</head>
+
+<body>
+    <!-- header头部模块 start -->
+    <header class="header" id="top">
+        <!-- logo模块 -->
+        <div class="logo">
+            <h1>
+                <a href="index-children.html" title="童书绘">童书绘 <img src="../img/logo.png" alt="" height="70px"></a>
+            </h1>
+        </div>
+        <!-- nav导航栏部分 -->
+        <div class="nav">
+            <ul id="chosen-container">
+                <li class="back" id="back">
+                    <a href="index-children.html">
+                        <button>
+                            <img src="../img/back-chosen.svg" alt="">
+                        </button>
+                    </a>
+                </li>
+                <li class="chosen">
+                    <a>
+                        <img src="../img/color.png" alt="">
+                        <span>颜色：</span>
+                        <img class="featureimage" src="../img/white.png"
+                             style="width: 70px;height: 70px;border-radius: 50%; " alt="">
+                    </a>
+                </li>
+                <li class="chosen">
+                    <a>
+                        <img src="../img/protagonist.jpg" alt=""><span>主角：</span>
+                        <img class="featureimage" src="../img/white.png"
+                             style="width: 70px;height: 70px;border-radius: 50%; " alt="">
+                    </a>
+                </li>
+                <li class="chosen">
+                    <a>
+                        <img src="../img/clock.jpg" alt=""><span>时间：</span>
+                        <img class="featureimage" src="../img/white.png"
+                             style="width: 70px;height: 70px;border-radius: 50%; " alt="">
+                    </a>
+                </li>
+                <li class="chosen">
+                    <a>
+                        <img src="../img/placement.png" alt=""><span>地点：</span>
+                        <img class="featureimage" src="../img/white.png"
+                             style="width: 70px;height: 70px;border-radius: 50%; " alt="">
+                    </a>
+                </li>
+                <li class="like" id="like">
+                    <!-- 现有的导航项 -->
+                    <button id="likeButton" onclick="myFavorite()">
+                        <img src="../img/like.svg" alt="" title="我的喜欢" class="like_it" onclick="likeIt('favorites')" id="favorites">
+                    </button>
+                    <!-- 下拉菜单部分 -->
+                    <ul class="dropdown-menu" id="favoritesList" style="display: none;">
+                        <li>· 熊熊乐园—发现新世界</li>
+                        <li>· 熊熊乐园—发现新世界</li>
+                        <li>· 熊熊乐园—发现新世界</li>
+                        <!-- 更多列表项根据需要添加 -->
+                    </ul>
+                    <script>
+                        document.getElementById('likeButton').addEventListener('click', function () {
+                            const dropdown = this.nextElementSibling;
+                            if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+                                dropdown.style.display = 'block';
+                            } else {
+                                dropdown.style.display = 'none';
+                            }
+                        });
+                    </script>
+                </li>
+            </ul>
+
+        </div>
+
+
+    </header>
+    <!-- header头部模块 end -->
+
+    <!-- 主体内容 -->
+
+    <div class="container">
+        <h1 id="count-num">共找到13本书！</h1>
+        <section class="w" id="book-list">
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon-1">
+                </div>
+            </div>
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon-2">
+                </div>
+            </div>
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon-3">
+                </div>
+            </div>
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon-4">
+                </div>
+            </div>
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon-5">
+                </div>
+            </div>
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon-6">
+                </div>
+            </div>
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon-7">
+                </div>
+            </div>
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon-8">
+                </div>
+            </div>
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon-9">
+                </div>
+            </div>
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon-10">
+                </div>
+            </div>
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon-11">
+                </div>
+            </div>
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon-12">
+                </div>
+            </div>
+            <div class="book">
+                <img src="../img/熊熊乐园发现新世界.png" alt="书籍封面" class="cover">
+                <div class="info">
+                    <p><span>书名：</span>美女与野兽</p>
+                    <p><span>主人公形象：</span>公主、国王、怪兽</p>
+                    <p><span>主人公特点：</span>外貌、身份</p>
+                    <p><span>主人公关系：</span>家庭关系</p>
+                    <p><span>时间：</span>四季</p>
+                    <p><span>时间：</span>城堡、花园</p>
+                    <img src="../img/like.svg" alt="" class="like_it" title="喜欢这本书！" id="likeIcon">
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+<script src="../js/result_children.js"></script>
+</html>
